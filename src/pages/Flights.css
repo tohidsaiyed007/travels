@@ -1,0 +1,96 @@
+/* .card-section{
+  margin-top: 40px;
+  padding: 20px;
+}
+
+.flight-card{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(102, 99, 7, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 15px;
+  color: white;
+  transition: 0.3s;
+}
+
+.flight-card:hover{
+  transform: scale(1.02);
+}
+
+.price button{
+  margin-top: 5px;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 8px;
+  background: #ff7a00;
+  color: rgb(245, 241, 241);
+  cursor: pointer;
+} */
+
+
+
+
+.card-section{
+  margin-top: 40px;
+  padding: 20px;
+}
+
+.flight-card{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: rgba(194, 196, 196, 0.9); /* clean white glass */
+  backdrop-filter: blur(8px);
+
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 15px;
+
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+
+  transition: all 0.3s ease;
+}
+
+/* hover */
+.flight-card:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* text */
+.route h3{
+  color: #0d0505;
+}
+
+.route p{
+  /* color: #777; */
+  color: rgb(48, 121, 150);
+}
+
+/* price */
+.price h2{
+  /* color: #ff7a00; */
+  color: black;
+}
+
+/* button */
+.price button{
+  margin-top: 5px;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(45deg, #5a534d, #045a69); /* modern gradient */
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* hover button */
+.price button:hover{
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(255,122,0,0.4);
+}

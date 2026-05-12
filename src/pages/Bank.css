@@ -1,0 +1,105 @@
+/* BACKGROUND */
+.bank-container {
+  padding: 40px;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  background: #f1f5f9;
+}
+
+/* TITLE */
+.title {
+  text-align: center;
+  font-size: 28px;
+  color: #0f172a;
+  animation: fadeUp 0.6s ease forwards;
+}
+
+.sub {
+  text-align: center;
+  color: #64748b;
+  margin-bottom: 40px;
+  animation: fadeUp 0.8s ease forwards;
+}
+
+/* MAIN */
+.main-box {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* QR */
+.qr-section {
+  background: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+
+  /* animation */
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+.qr-section:nth-child(1) {
+  animation-delay: 0.3s;
+}
+
+.qr-section:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+/* CARD */
+.details-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  width: 280px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUp 0.8s ease forwards;
+  animation-delay: 0.7s;
+}
+
+.details-card h3 {
+  margin-bottom: 10px;
+  color: #0f172a;
+}
+
+.details-card p {
+  margin: 6px 0;
+  color: #475569;
+}
+
+/* BOTTOM CARD */
+.bottom {
+  margin: 50px auto;
+
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUp 0.8s ease forwards;
+  animation-delay: 1s;
+}
+
+/* KEYFRAME */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .main-box {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .details-card {
+    width: 90%;
+  }
+}

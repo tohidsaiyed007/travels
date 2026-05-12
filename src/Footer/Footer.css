@@ -1,0 +1,101 @@
+/* .footer{
+  background: #111;
+  color: white;
+  margin-top: 50px;
+  padding-top: 30px;
+}
+
+.footer-container{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 20px 40px;
+}
+
+.footer-left h2{
+  color: #ff7a00;
+}
+
+.footer-links h4{
+  margin-bottom: 10px;
+}
+
+.footer-links p{
+  margin: 5px 0;
+  cursor: pointer;
+  color: #ccc;
+}
+
+.footer-links p:hover{
+  color: #ff7a00;
+}
+
+.footer-bottom{
+  text-align: center;
+  padding: 15px;
+  border-top: 1px solid #333;
+  margin-top: 20px;
+  font-size: 14px;
+} */
+
+
+.footer{
+  background: #ffffff; /* clean white */
+  color: #333;
+  padding-top: 40px;
+  border-top: 1px solid #eee;
+}
+
+/* grid */
+.footer-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  gap: 30px;
+  padding: 30px 40px;
+}
+
+
+.logo0{
+ color: #333;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+
+.footer-box h3{
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #444;
+}
+
+
+
+.footer-box a,
+.footer-box p{
+  display: block;
+  margin: 6px 0;
+  color: #0d0b0b;
+  text-decoration: none;
+  transition: 0.25s;
+}
+
+/* 🔥 simple modern hover */
+.footer-box a:hover{
+  color: #ff7a00;
+  padding-left: 4px;
+}
+
+/* icons */
+.footer-box p svg{
+  margin-right: 8px;
+  color: #ff7a00;
+}
+
+/* bottom */
+.footer-bottom{
+  text-align: center;
+  padding: 12px;
+  border-top: 1px solid #eee;
+  font-size: 13px;
+  color: #999;
+}
