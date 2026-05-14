@@ -17,11 +17,9 @@
   padding: 20px;
 
   background:
-    linear-gradient(
-      135deg,
-      rgb(48,121,150),
-      rgb(72,155,190)
-    );
+    radial-gradient(circle at top left,#2563eb33,transparent 30%),
+    radial-gradient(circle at bottom right,#06b6d433,transparent 30%),
+    linear-gradient(135deg,#020617,#0f172a,#111827);
 }
 
 /* CARD */
@@ -30,14 +28,16 @@
   width: 100%;
   max-width: 400px;
 
-  background: white;
+  background: rgba(255,255,255,0.97);
 
   padding: 35px 25px;
 
-  border-radius: 18px;
+  border-radius: 22px;
+
+  border: 1px solid #e2e8f0;
 
   box-shadow:
-    0 10px 30px rgba(0,0,0,0.15);
+    0 10px 35px rgba(0,0,0,0.25);
 }
 
 /* TOP */
@@ -49,12 +49,15 @@
 
 .login-top h1{
   font-size: 32px;
-  color: rgb(48,121,150);
   margin-bottom: 8px;
+
+  background: linear-gradient(90deg,#2563eb,#06b6d4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .login-top p{
-  color: #666;
+  color: #475569;
   font-size: 14px;
 }
 
@@ -70,8 +73,8 @@
   width: 100%;
   height: 55px;
 
-  border: 1px solid #ddd;
-  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
 
   display: flex;
   align-items: center;
@@ -83,14 +86,17 @@
   transition: 0.3s;
 
   position: relative;
+
+  background: #f8fafc;
 }
 
 .input-box:focus-within{
-  border-color: rgb(48,121,150);
+  border-color: #2563eb;
+  box-shadow: 0 0 0 4px #2563eb22;
 }
 
 .input-icon{
-  color: rgb(48,121,150);
+  color: #2563eb;
   font-size: 16px;
 }
 
@@ -104,11 +110,19 @@
   padding: 0 12px;
 
   font-size: 15px;
+
+  background: transparent;
+
+  color: #334155;
+}
+
+.input-box input::placeholder{
+  color: #94a3b8;
 }
 
 .eye-icon{
   cursor: pointer;
-  color: #666;
+  color: #475569;
 }
 
 /* FORGOT */
@@ -120,8 +134,9 @@
 
 .forgot-text a{
   text-decoration: none;
-  color: rgb(48,121,150);
+  color: #2563eb;
   font-size: 14px;
+  font-weight: 500;
 }
 
 /* BUTTON */
@@ -131,13 +146,13 @@
   height: 52px;
 
   border: none;
-  border-radius: 12px;
+  border-radius: 14px;
 
   background:
     linear-gradient(
       135deg,
-      rgb(48,121,150),
-      rgb(72,155,190)
+      #2563eb,
+      #06b6d4
     );
 
   color: white;
@@ -151,6 +166,7 @@
 
 .login-btn:hover{
   transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(37,99,235,0.25);
 }
 
 /* BOTTOM */
@@ -159,11 +175,11 @@
   text-align: center;
   margin-top: 25px;
   font-size: 14px;
-  color: #666;
+  color: #475569;
 }
 
 .bottom-text a{
-  color: rgb(48,121,150);
+  color: #2563eb;
   text-decoration: none;
   font-weight: 600;
 }

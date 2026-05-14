@@ -5,47 +5,62 @@ import "./Bank.css";
 
 function Bank() {
 
-  const upiLink = "upi://pay?pa=saiyed@okaxis&pn=SaiyedTravels&am=4999&cu=INR";
+  // ICICI QR
+  const iciciUPI =
+    "upi://pay?pa=icici@okaxis&pn=SaiyedTravels&am=4999&cu=INR";
+
+  // BANK OF BARODA QR
+  const bobUPI =
+    "upi://pay?pa=bob@okaxis&pn=SaiyedTravels&am=4999&cu=INR";
 
   return (
     <div className="bank-container">
 
-      {/* TOP TITLE */}
+      {/* TITLE */}
       <h2 className="title">SAIYED TRAVELS</h2>
       <p className="sub">JHUNJHUNU - RAJASTHAN</p>
 
-      <div className="main-box">
+      {/* TWO BANK CARDS */}
+      <div className="bank-grid">
 
-        {/* LEFT QR */}
-        <div className="qr-section">
-          <QRCodeCanvas value={upiLink} size={230} />
+        {/* ICICI CARD */}
+        <div className="bank-card">
+
+          <h3 className="bank-name">ICICI BANK LTD</h3>
+
+          <div className="qr-box">
+            <QRCodeCanvas value={iciciUPI} size={220} />
+          </div>
+
+          <div className="details-card">
+            <p><b>Account Name:</b> SAIYED TRAVELS</p>
+            <p><b>Bank:</b> ICICI BANK LTD</p>
+            <p><b>AC No:</b> 079905001743</p>
+            <p><b>City:</b> JHUNJHUNU</p>
+            <p><b>IFSC:</b> ICIC0000799</p>
+          </div>
+
         </div>
 
-        {/* CENTER QR */}
-        <div className="qr-section">
-          <QRCodeCanvas value={upiLink} size={180} />
+        {/* BANK OF BARODA CARD */}
+        <div className="bank-card">
+
+          <h3 className="bank-name">BANK OF BARODA</h3>
+
+          <div className="qr-box">
+            <QRCodeCanvas value={bobUPI} size={220} />
+          </div>
+
+          <div className="details-card">
+            <p><b>Account Name:</b> SAIYED TRAVELS</p>
+            <p><b>Bank:</b> BANK OF BARODA</p>
+            <p><b>AC No:</b> 16870200000107</p>
+            <p><b>City:</b> JHUNJHUNU</p>
+            <p><b>IFSC:</b> BARB0MOHJHU</p>
+          </div>
+
         </div>
 
-        {/* RIGHT DETAILS */}
-        <div className="details-card">
-          <h3>Bank Details</h3>
-          <p><b>Name:</b> SAIYED TRAVELS</p>
-          <p><b>Bank:</b> HDFC BANK</p>
-          <p><b>AC No:</b> 00000000000</p>
-          <p><b>Branch:</b> JHUNJHUNU </p>
-          <p><b>IFSC:</b> ICICI0000000</p>
-        </div>
-
-      </div>
-
-      {/* BOTTOM CARD */}
-      <div className="details-card bottom">
-        <h3>Bank Details</h3>
-          <p><b>Name:</b> SAIYED TRAVELS</p>
-          <p><b>Bank:</b> HDFC BANK</p>
-          <p><b>AC No:</b> 00000000000</p>
-          <p><b>Branch:</b> JHUNJHUNU </p>
-          <p><b>IFSC:</b> ICICI0000000</p>
       </div>
 
     </div>

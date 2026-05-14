@@ -1,96 +1,185 @@
-/* .card-section{
-  margin-top: 40px;
-  padding: 20px;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-.flight-card{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: rgba(102, 99, 7, 0.1);
-  backdrop-filter: blur(10px);
-  border-radius: 15px;
-  padding: 20px;
-  margin-bottom: 15px;
-  color: white;
-  transition: 0.3s;
-}
-
-.flight-card:hover{
-  transform: scale(1.02);
-}
-
-.price button{
-  margin-top: 5px;
-  padding: 8px 15px;
-  border: none;
-  border-radius: 8px;
-  background: #ff7a00;
-  color: rgb(245, 241, 241);
-  cursor: pointer;
-} */
-
-
-
 
 .card-section{
-  margin-top: 40px;
-  padding: 20px;
+  width: 100%;
+  min-height: 100vh;
+
+  padding: 50px;
+
+  background: linear-gradient(135deg,#0f172a,#1e293b,#334155);
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+  gap: 30px;
+
+  font-family: "Poppins", sans-serif;
 }
 
+/* Flight Card */
+
 .flight-card{
+
+  background: rgba(255,255,255,0.08);
+
+  backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(255,255,255,0.12);
+
+  border-radius: 25px;
+
+  padding: 30px;
+
+  color: white;
+
+  transition: 0.4s ease;
+
+  position: relative;
+
+  overflow: hidden;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* Hover */
+
+.flight-card:hover{
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+/* Top */
+
+.flight-top{
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  background: rgba(194, 196, 196, 0.9); /* clean white glass */
-  backdrop-filter: blur(8px);
-
-  border-radius: 15px;
-  padding: 20px;
-  margin-bottom: 15px;
-
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-
-  transition: all 0.3s ease;
 }
 
-/* hover */
-.flight-card:hover{
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+/* City */
+
+.city-box p{
+  color: #cbd5e1;
+  font-size: 14px;
+  margin-bottom: 5px;
 }
 
-/* text */
-.route h3{
-  color: #0d0505;
+.city-box h2{
+  font-size: 30px;
+  font-weight: 700;
 }
 
-.route p{
-  /* color: #777; */
-  color: rgb(48, 121, 150);
+/* Flight Icon */
+
+.flight-icon{
+  font-size: 40px;
+  color: #38bdf8;
 }
 
-/* price */
-.price h2{
-  /* color: #ff7a00; */
-  color: black;
+/* Middle */
+
+.flight-middle{
+  margin: 25px 0;
 }
 
-/* button */
-.price button{
-  margin-top: 5px;
-  padding: 8px 15px;
-  border: none;
-  border-radius: 8px;
-  background: linear-gradient(45deg, #5a534d, #045a69); /* modern gradient */
+.line{
+  width: 100%;
+  height: 2px;
+
+  background: linear-gradient(to right,#38bdf8,#2563eb);
+
+  border-radius: 10px;
+}
+
+/* Bottom */
+
+.flight-bottom{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Time */
+
+.time-box p{
+  color: #cbd5e1;
+  margin-bottom: 6px;
+}
+
+.time-box h3{
+  font-size: 18px;
   color: white;
-  cursor: pointer;
-  transition: 0.3s;
 }
 
-/* hover button */
-.price button:hover{
+/* Price */
+
+.price-box{
+  text-align: right;
+}
+
+.price-box h2{
+  font-size: 30px;
+  color: #38bdf8;
+  margin-bottom: 10px;
+}
+
+/* Button */
+
+.price-box button{
+
+  padding: 10px 20px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  background: linear-gradient(45deg,#38bdf8,#2563eb);
+
+  color: white;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+/* Button Hover */
+
+.price-box button:hover{
+
   transform: scale(1.05);
-  box-shadow: 0 5px 15px rgba(255,122,0,0.4);
+
+  box-shadow: 0 10px 20px rgba(56,189,248,0.4);
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+  .card-section{
+    padding: 20px;
+  }
+
+  .flight-top{
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .flight-bottom{
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .price-box{
+    text-align: center;
+  }
+
 }
