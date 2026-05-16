@@ -475,7 +475,8 @@ function Home() {
       <div className="hero-text">
 
         <h1 className="Flighat-colur">
-          Saiyed Travels ᯓ ✈︎
+          {/* Saiyed Travels ᯓ ✈︎ */}
+           SAIYED TRAVELS ᯓ ✈︎
         </h1>
 
         <p>
@@ -780,7 +781,7 @@ function Home() {
 <div className="iata-section">
 
   <img
-    src="/IAATA.png"
+    src="/saiyed.png"
     alt="IATAA Logo"
     className="iata-logo"
   />

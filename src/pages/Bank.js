@@ -1,69 +1,410 @@
 
-import React from "react";
-import { QRCodeCanvas } from "qrcode.react";
+  // // import React from "react";
+  // // import { QRCodeCanvas } from "qrcode.react";
+  // // import "./Bank.css";
+
+  // // function Bank() {
+
+  // //   // ICICI QR
+  // //   const iciciUPI =
+  // //     "upi://pay?pa=icici@okaxis&pn=SaiyedTravels&am=4999&cu=INR";
+
+  // //   // BANK OF BARODA QR
+  // //   const bobUPI =
+  // //     "upi://pay?pa=bob@okaxis&pn=SaiyedTravels&am=4999&cu=INR";
+
+  // //   return (
+  // //     <div className="bank-container">
+
+  // //       {/* TITLE */}
+  // //       <h2 className="title">SAIYED TRAVELS</h2>
+  // //       <p className="sub">JHUNJHUNU - RAJASTHAN</p>
+
+  // //       {/* TWO BANK CARDS */}
+  // //       <div className="bank-grid">
+
+  // //         {/* ICICI CARD */}
+  // //         <div className="bank-card">
+
+  // //           <h3 className="bank-name">ICICI BANK LTD</h3>
+
+  // //           <div className="qr-box">
+  // //             <QRCodeCanvas value={iciciUPI} size={220} />
+  // //           </div>
+
+  // //           <div className="details-card">
+  // //             <p><b>Account Name:</b> SAIYED TRAVELS</p>
+  // //             <p><b>Bank:</b> ICICI BANK LTD</p>
+  // //             <p><b>AC No:</b> 079905001743</p>
+  // //             <p><b>City:</b> JHUNJHUNU</p>
+  // //             <p><b>IFSC:</b> ICIC0000799</p>
+  // //           </div>
+
+  // //         </div>
+
+  // //         {/* BANK OF BARODA CARD */}
+  // //         <div className="bank-card">
+
+  // //           <h3 className="bank-name">BANK OF BARODA</h3>
+
+  // //           <div className="qr-box">
+  // //             <QRCodeCanvas value={bobUPI} size={220} />
+  // //           </div>
+
+  // //           <div className="details-card">
+  // //             <p><b>Account Name:</b> SAIYED TRAVELS</p>
+  // //             <p><b>Bank:</b> BANK OF BARODA</p>
+  // //             <p><b>AC No:</b> 16870200000107</p>
+  // //             <p><b>City:</b> JHUNJHUNU</p>
+  // //             <p><b>IFSC:</b> BARB0MOHJHU</p>
+  // //           </div>
+
+  // //         </div>
+
+  // //       </div>
+
+  // //     </div>
+  // //   );
+  // // }
+
+  // // export default Bank;
+
+
+
+
+
+
+
+
+
+
+
+  // // import React from "react";
+  // // import { QRCodeCanvas } from "qrcode.react";
+  // // import "./Bank.css";
+
+  // // function Bank() {
+
+  // //   // ICICI QR
+  // //   const iciciUPI =
+  // //     "upi://pay?pa=icici@okaxis&pn=SaiyedTravels&am=4999&cu=INR";
+
+  // //   // BANK OF BARODA QR
+  // //   const bobUPI =
+  // //     "upi://pay?pa=bob@okaxis&pn=SaiyedTravels&am=4999&cu=INR";
+
+  // //   return (
+  // //     <div className="bank-container">
+
+  // //       {/* TITLE */}
+  // //       <h2 className="title">SAIYED TRAVELS</h2>
+  // //       <p className="sub">JHUNJHUNU - RAJASTHAN</p>
+
+  // //       {/* TWO BANK CARDS */}
+  // //       <div className="bank-grid">
+
+  // //         {/* ICICI CARD */}
+  // //         <div className="bank-card">
+
+  // //           {/* ICICI LOGO */}
+  // //           <img
+  // //             src="/icici.jpeg"
+  // //             alt="ICICI Bank"
+  // //             className="bank-logo"
+  // //           />
+
+  // //           <h3 className="bank-name">ICICI BANK LTD</h3>
+
+  // //           <div className="qr-box">
+  // //             <QRCodeCanvas value={iciciUPI} size={220} />
+  // //           </div>
+
+  // //           <div className="details-card">
+  // //             <p><b>Account Name:</b> SAIYED TRAVELS</p>
+  // //             <p><b>Bank:</b> ICICI BANK LTD</p>
+  // //             <p><b>AC No:</b> 079905001743</p>
+  // //             <p><b>City:</b> JHUNJHUNU</p>
+  // //             <p><b>IFSC:</b> ICIC0000799</p>
+  // //           </div>
+
+  // //         </div>
+
+  // //         {/* BANK OF BARODA CARD */}
+  // //         <div className="bank-card">
+
+  // //           <h3 className="bank-name">BANK OF BARODA</h3>
+
+  // //           <div className="qr-box">
+  // //             <QRCodeCanvas value={bobUPI} size={220} />
+  // //           </div>
+
+  // //           <div className="details-card">
+  // //             <p><b>Account Name:</b> SAIYED TRAVELS</p>
+  // //             <p><b>Bank:</b> BANK OF BARODA</p>
+  // //             <p><b>AC No:</b> 16870200000107</p>
+  // //             <p><b>City:</b> JHUNJHUNU</p>
+  // //             <p><b>IFSC:</b> BARB0MOHJHU</p>
+  // //           </div>
+
+  // //         </div>
+
+  // //       </div>
+
+  // //     </div>
+  // //   );
+  // // }
+
+  // // export default Bank;
+
+
+
+
+
+
+
+
+
+
+  // import React from "react";
+  // import "./Bank.css";
+
+  // function Bank() {
+
+  //   return (
+  //     <div className="bank-container">
+
+  //       {/* TITLE */}
+  //       <h2 className="title">SAIYED TRAVELS</h2>
+  //       <p className="sub">JHUNJHUNU - RAJASTHAN</p>
+
+  //       {/* TWO BANK CARDS */}
+  //       <div className="bank-grid">
+
+  //         {/* ICICI CARD */}
+  //         <div className="bank-card">
+
+  //           <h3 className="bank-name">ICICI BANK LTD</h3>
+
+  //           {/* YOUR ICICI QR IMAGE */}
+  //           <div className="qr-box">
+  //             <img
+  //               src="/newicici.jpeg"
+  //               alt="ICICI QR"
+  //               className="qr-image"
+  //             />
+  //           </div>
+
+  //           <div className="details-card">
+  //             <p><b>Account Name:</b> SAIYED TRAVELS</p>
+  //             <p><b>Bank:</b> ICICI BANK LTD</p>
+  //             <p><b>AC No:</b> 079905001743</p>
+  //             <p><b>City:</b> JHUNJHUNU</p>
+  //             <p><b>IFSC:</b> ICIC0000799</p>
+  //           </div>
+
+  //         </div>
+
+  //         {/* BANK OF BARODA CARD */}
+  //         <div className="bank-card">
+
+  //           <h3 className="bank-name">BANK OF BARODA</h3>
+
+  //           <div className="qr-box">
+  //             <img
+  //               src="/bob.jpeg"
+  //               alt="BOB QR"
+  //               className="qr-image"
+  //             />
+  //           </div>
+
+  //           <div className="details-card">
+  //             <p><b>Account Name:</b> SAYED TRAVELS</p>
+  //             <p><b>Bank:</b> BANK OF BARODA</p>
+  //             <p><b>AC No:</b> 16870200000107</p>
+  //             <p><b>City:</b> JHUNJHUNU</p>
+  //             <p><b>IFSC:</b> BARB0MOHJHU</p>
+  //           </div>
+
+  //         </div>
+
+  //       </div>
+
+  //     </div>
+  //   );
+  // }
+
+  // export default Bank;
+
+
+
+  import React from "react";
+
 import "./Bank.css";
+
+import { useNavigate } from "react-router-dom";
 
 function Bank() {
 
-  // ICICI QR
-  const iciciUPI =
-    "upi://pay?pa=icici@okaxis&pn=SaiyedTravels&am=4999&cu=INR";
-
-  // BANK OF BARODA QR
-  const bobUPI =
-    "upi://pay?pa=bob@okaxis&pn=SaiyedTravels&am=4999&cu=INR";
+  const navigate = useNavigate();
 
   return (
+
     <div className="bank-container">
 
       {/* TITLE */}
-      <h2 className="title">SAIYED TRAVELS</h2>
-      <p className="sub">JHUNJHUNU - RAJASTHAN</p>
+
+      <h2 className="title">
+        SAIYED TRAVELS
+      </h2>
+
+      <p className="sub">
+        JHUNJHUNU - RAJASTHAN
+      </p>
 
       {/* TWO BANK CARDS */}
+
       <div className="bank-grid">
 
         {/* ICICI CARD */}
+
         <div className="bank-card">
 
-          <h3 className="bank-name">ICICI BANK LTD</h3>
+          <h3 className="bank-name">
+            ICICI BANK LTD
+          </h3>
+
+          {/* QR */}
 
           <div className="qr-box">
-            <QRCodeCanvas value={iciciUPI} size={220} />
+
+            <img
+              src="/newicici.jpeg"
+              alt="ICICI QR"
+              className="qr-image"
+            />
+
           </div>
 
           <div className="details-card">
-            <p><b>Account Name:</b> SAIYED TRAVELS</p>
-            <p><b>Bank:</b> ICICI BANK LTD</p>
-            <p><b>AC No:</b> 079905001743</p>
-            <p><b>City:</b> JHUNJHUNU</p>
-            <p><b>IFSC:</b> ICIC0000799</p>
+
+            <p>
+              <b>Account Name:</b>
+              {" "}
+              SAIYED TRAVELS
+            </p>
+
+            <p>
+              <b>Bank:</b>
+              {" "}
+              ICICI BANK LTD
+            </p>
+
+            <p>
+              <b>AC No:</b>
+              {" "}
+              079905001743
+            </p>
+
+            <p>
+              <b>City:</b>
+              {" "}
+              JHUNJHUNU
+            </p>
+
+            <p>
+              <b>IFSC:</b>
+              {" "}
+              ICIC0000799
+            </p>
+
           </div>
 
         </div>
 
-        {/* BANK OF BARODA CARD */}
+        {/* BOB CARD */}
+
         <div className="bank-card">
 
-          <h3 className="bank-name">BANK OF BARODA</h3>
+          <h3 className="bank-name">
+            BANK OF BARODA
+          </h3>
 
           <div className="qr-box">
-            <QRCodeCanvas value={bobUPI} size={220} />
+
+            <img
+              src="/bob.jpeg"
+              alt="BOB QR"
+              className="qr-image"
+            />
+
           </div>
 
           <div className="details-card">
-            <p><b>Account Name:</b> SAIYED TRAVELS</p>
-            <p><b>Bank:</b> BANK OF BARODA</p>
-            <p><b>AC No:</b> 16870200000107</p>
-            <p><b>City:</b> JHUNJHUNU</p>
-            <p><b>IFSC:</b> BARB0MOHJHU</p>
+
+            <p>
+              <b>Account Name:</b>
+              {" "}
+              SAIYED TRAVELS
+            </p>
+
+            <p>
+              <b>Bank:</b>
+              {" "}
+              BANK OF BARODA
+            </p>
+
+            <p>
+              <b>AC No:</b>
+              {" "}
+              16870200000107
+            </p>
+
+            <p>
+              <b>City:</b>
+              {" "}
+              JHUNJHUNU
+            </p>
+
+            <p>
+              <b>IFSC:</b>
+              {" "}
+              BARB0MOHJHU
+            </p>
+
           </div>
 
         </div>
 
       </div>
 
+      {/* PAYMENT FORM */}
+
+      <div className="payment-form">
+
+        <h2>
+          Payment Confirmation
+        </h2>
+
+        <input
+          type="text"
+          placeholder="Enter UTR Number"
+        />
+
+        <input
+          type="file"
+        />
+
+        <button
+          className="payment-btn"
+          onClick={() => navigate("/success")}
+        >
+          Confirm Payment
+        </button>
+
+      </div>
+
     </div>
+
   );
 }
 

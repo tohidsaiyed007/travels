@@ -39,9 +39,9 @@ function Customer() {
           </div>
 
           <a href="tel:+919928222512">
-            <h2 className="contact">M.Ayub.Saiyed +91 0000000000</h2>
-            <h2 className="contact">M.Tayyub.Saiyed +91 0000000000</h2>
-            <h2 className="contact">Abdul.Wahid +91 0000000000</h2>
+            <h2 className="contact">M.Ayub.Saiyed +91 9414080277</h2>
+            <h2 className="contact">M.Tayyub.Saiyed +91 9928222512</h2>
+            <h2 className="contact">Abdul.Wahid +91 96604 97018 </h2>
           </a>
         </div>
 
