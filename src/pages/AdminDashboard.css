@@ -130,3 +130,50 @@
 .logout-btn:hover{
   background: #d97706;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+.add-flight-box{
+  background:#1e293b;
+  padding:25px;
+  border-radius:15px;
+  margin-bottom:30px;
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+}
+
+.add-flight-box h2{
+  color:white;
+}
+
+.add-flight-box input{
+  padding:12px;
+  border:none;
+  border-radius:10px;
+  outline:none;
+}
+
+.add-flight-box button{
+  padding:12px;
+  border:none;
+  border-radius:10px;
+  background:#38bdf8;
+  color:white;
+  font-size:16px;
+  cursor:pointer;
+}
+
+.flight-title{
+  color:white;
+  margin-bottom:20px;
+}

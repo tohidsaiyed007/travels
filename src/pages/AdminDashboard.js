@@ -1,4 +1,3 @@
-
 // import { useEffect, useState } from "react";
 // import { useNavigate } from "react-router-dom";
 
@@ -10,11 +9,31 @@
 
 //   const [bookings, setBookings] = useState([]);
 
+//   const [flights, setFlights] = useState([]);
+
+//   const [editingId, setEditingId] =
+//     useState(null);
+
+//   const [flight, setFlight] = useState({
+//     from: "",
+//     to: "",
+//     date: "",
+//     airline: "",
+//     departureTime: "",
+//     arrivalTime: "",
+//     price: "",
+//     seats: ""
+//   });
+
 //   useEffect(() => {
 
-//     fetch("http://localhost:5000/admin/bookings")
+//     fetch("https://travels-tuvk.onrender.com/admin/bookings")
 //       .then((res) => res.json())
 //       .then((data) => setBookings(data));
+
+//     fetch("http://localhost:5000/api/flights")
+//       .then((res) => res.json())
+//       .then((data) => setFlights(data));
 
 //   }, []);
 
@@ -30,6 +49,122 @@
 
 //   };
 
+//   // HANDLE INPUT
+
+//   const handleChange = (e) => {
+
+//     setFlight({
+//       ...flight,
+//       [e.target.name]: e.target.value
+//     });
+
+//   };
+
+//   // ADD FLIGHT
+
+//   const addFlight = async () => {
+
+//     try {
+
+//       const response = await fetch(
+//         "http://localhost:5000/api/flights/add",
+//         {
+//           method: "POST",
+//           headers: {
+//             "Content-Type": "application/json"
+//           },
+//           body: JSON.stringify(flight)
+//         }
+//       );
+
+//       const data = await response.json();
+
+//       if (response.ok) {
+
+//         alert("Flight Added ✅");
+
+//         window.location.reload();
+
+//       } else {
+
+//         alert(data.message);
+
+//       }
+
+//     } catch (error) {
+
+//       console.log(error);
+
+//       alert("Server Error");
+
+//     }
+
+//   };
+
+//   // EDIT FLIGHT
+
+//   const editFlight = (flightData) => {
+
+//     setFlight({
+//       from: flightData.from,
+//       to: flightData.to,
+//       date: flightData.date,
+//       airline: flightData.airline,
+//       departureTime:
+//         flightData.departureTime,
+//       arrivalTime:
+//         flightData.arrivalTime,
+//       price: flightData.price,
+//       seats: flightData.seats
+//     });
+
+//     setEditingId(flightData._id);
+
+//   };
+
+//   // UPDATE FLIGHT
+
+//   const updateFlight = async () => {
+
+//     try {
+
+//       const response = await fetch(
+//         `http://localhost:5000/api/flights/${editingId}`,
+//         {
+//           method: "PUT",
+//           headers: {
+//             "Content-Type":
+//               "application/json"
+//           },
+//           body: JSON.stringify(flight)
+//         }
+//       );
+
+//       const data =
+//         await response.json();
+
+//       if (response.ok) {
+
+//         alert("Flight Updated ✅");
+
+//         window.location.reload();
+
+//       } else {
+
+//         alert(data.message);
+
+//       }
+
+//     } catch (error) {
+
+//       console.log(error);
+
+//       alert("Update Failed ❌");
+
+//     }
+
+//   };
+
 //   // DELETE BOOKING
 
 //   const deleteBooking = async (id) => {
@@ -37,7 +172,7 @@
 //     try {
 
 //       await fetch(
-//         `http://localhost:5000/admin/booking/${id}`,
+//         `https://travels-tuvk.onrender.com/admin/booking/${id}`,
 //         {
 //           method: "DELETE"
 //         }
@@ -50,6 +185,33 @@
 //       alert("Booking Deleted ✅");
 
 //     } catch (err) {
+
+//       alert("Delete Failed ❌");
+
+//     }
+
+//   };
+
+//   // DELETE FLIGHT
+
+//   const deleteFlight = async (id) => {
+
+//     try {
+
+//       await fetch(
+//         `http://localhost:5000/api/flights/${id}`,
+//         {
+//           method: "DELETE"
+//         }
+//       );
+
+//       setFlights(
+//         flights.filter((f) => f._id !== id)
+//       );
+
+//       alert("Flight Deleted ✅");
+
+//     } catch (error) {
 
 //       alert("Delete Failed ❌");
 
@@ -85,9 +247,194 @@
 //             <p>Total Bookings</p>
 //           </div>
 
+//           <div className="stat-card">
+//             <h2>{flights.length}</h2>
+//             <p>Total Flights</p>
+//           </div>
+
 //         </div>
 
 //       </div>
+
+//       {/* ADD FLIGHT */}
+
+//       <div className="add-flight-box">
+
+//         <h2>
+//           {
+//             editingId
+//               ? "Update Flight ✈"
+//               : "Add Flight ✈"
+//           }
+//         </h2>
+
+//         <input
+//           type="text"
+//           name="from"
+//           placeholder="From"
+//           value={flight.from}
+//           onChange={handleChange}
+//         />
+
+//         <input
+//           type="text"
+//           name="to"
+//           placeholder="To"
+//           value={flight.to}
+//           onChange={handleChange}
+//         />
+
+//         <input
+//           type="date"
+//           name="date"
+//           value={flight.date}
+//           onChange={handleChange}
+//         />
+
+//         <input
+//           type="text"
+//           name="airline"
+//           placeholder="Airline"
+//           value={flight.airline}
+//           onChange={handleChange}
+//         />
+
+//         <input
+//           type="time"
+//           name="departureTime"
+//           value={flight.departureTime}
+//           onChange={handleChange}
+//         />
+
+//         <input
+//           type="time"
+//           name="arrivalTime"
+//           value={flight.arrivalTime}
+//           onChange={handleChange}
+//         />
+
+//         <input
+//           type="number"
+//           name="price"
+//           placeholder="Price"
+//           value={flight.price}
+//           onChange={handleChange}
+//         />
+
+//         <input
+//           type="number"
+//           name="seats"
+//           placeholder="Seats"
+//           value={flight.seats}
+//           onChange={handleChange}
+//         />
+
+//         <button
+//           onClick={
+//             editingId
+//               ? updateFlight
+//               : addFlight
+//           }
+//         >
+//           {
+//             editingId
+//               ? "Update Flight"
+//               : "Add Flight"
+//           }
+//         </button>
+
+//       </div>
+
+//       {/* ALL FLIGHTS */}
+
+//       <div className="flight-list">
+
+//         <h2 className="flight-title">
+//           All Flights ✈
+//         </h2>
+
+//         {flights.length === 0 ? (
+
+//           <p className="no-booking">
+//             No Flights Added
+//           </p>
+
+//         ) : (
+
+//           flights.map((f) => (
+
+//             <div
+//               className="booking-card"
+//               key={f._id}
+//             >
+
+//               <div className="booking-info">
+
+//                 <h2>
+//                   {f.from} ✈ {f.to}
+//                 </h2>
+
+//                 <p>
+//                   Airline:
+//                   <strong>
+//                     {" "}
+//                     {f.airline}
+//                   </strong>
+//                 </p>
+
+//                 <p>
+//                   Date:
+//                   <strong>
+//                     {" "}
+//                     {f.date}
+//                   </strong>
+//                 </p>
+
+//                 <p>
+//                   Price:
+//                   <strong>
+//                     {" "}
+//                     ₹{f.price}
+//                   </strong>
+//                 </p>
+
+//                 <p>
+//                   Seats:
+//                   <strong>
+//                     {" "}
+//                     {f.seats}
+//                   </strong>
+//                 </p>
+
+//               </div>
+
+//               <button
+//                 className="edit-btn"
+//                 onClick={() =>
+//                   editFlight(f)
+//                 }
+//               >
+//                 Edit
+//               </button>
+
+//               <button
+//                 className="delete-btn"
+//                 onClick={() =>
+//                   deleteFlight(f._id)
+//                 }
+//               >
+//                 Delete
+//               </button>
+
+//             </div>
+
+//           ))
+
+//         )}
+
+//       </div>
+
+//       {/* BOOKINGS */}
 
 //       <div className="booking-list">
 
@@ -174,6 +521,7 @@
 
 
 
+
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -185,11 +533,31 @@ function AdminDashboard() {
 
   const [bookings, setBookings] = useState([]);
 
+  const [flights, setFlights] = useState([]);
+
+  const [editingId, setEditingId] =
+    useState(null);
+
+  const [flight, setFlight] = useState({
+    from: "",
+    to: "",
+    date: "",
+    airline: "",
+    departureTime: "",
+    arrivalTime: "",
+    price: "",
+    seats: ""
+  });
+
   useEffect(() => {
 
     fetch("https://travels-tuvk.onrender.com/admin/bookings")
       .then((res) => res.json())
       .then((data) => setBookings(data));
+
+    fetch("http://localhost:5000/api/flights")
+      .then((res) => res.json())
+      .then((data) => setFlights(data));
 
   }, []);
 
@@ -202,6 +570,126 @@ function AdminDashboard() {
     alert("Logged Out ✅");
 
     navigate("/admin");
+
+  };
+
+  // HANDLE INPUT
+
+  const handleChange = (e) => {
+
+    setFlight({
+      ...flight,
+      [e.target.name]: e.target.value
+    });
+
+  };
+
+  // ADD FLIGHT
+
+  const addFlight = async () => {
+
+    try {
+
+      const response = await fetch(
+        "http://localhost:5000/api/flights/add",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(flight)
+        }
+      );
+
+      const data = await response.json();
+
+      if (response.ok) {
+
+        alert("Flight Added ✅");
+
+        fetch("http://localhost:5000/api/flights")
+          .then((res) => res.json())
+          .then((data) => setFlights(data));
+
+      } else {
+
+        alert(data.message);
+
+      }
+
+    } catch (error) {
+
+      console.log(error);
+
+      alert("Server Error");
+
+    }
+
+  };
+
+  // EDIT FLIGHT
+
+  const editFlight = (flightData) => {
+
+    setFlight({
+      from: flightData.from,
+      to: flightData.to,
+      date: flightData.date,
+      airline: flightData.airline,
+      departureTime:
+        flightData.departureTime,
+      arrivalTime:
+        flightData.arrivalTime,
+      price: flightData.price,
+      seats: flightData.seats
+    });
+
+    setEditingId(flightData._id);
+
+  };
+
+  // UPDATE FLIGHT
+
+  const updateFlight = async () => {
+
+    try {
+
+      const response = await fetch(
+        `http://localhost:5000/api/flights/${editingId}`,
+        {
+          method: "PUT",
+          headers: {
+            "Content-Type":
+              "application/json"
+          },
+          body: JSON.stringify(flight)
+        }
+      );
+
+      const data =
+        await response.json();
+
+      if (response.ok) {
+
+        alert("Flight Updated ✅");
+
+        fetch("http://localhost:5000/api/flights")
+          .then((res) => res.json())
+          .then((data) => setFlights(data));
+
+      } else {
+
+        alert(data.message);
+
+      }
+
+    } catch (error) {
+
+      console.log(error);
+
+      alert("Update Failed ❌");
+
+    }
 
   };
 
@@ -225,6 +713,33 @@ function AdminDashboard() {
       alert("Booking Deleted ✅");
 
     } catch (err) {
+
+      alert("Delete Failed ❌");
+
+    }
+
+  };
+
+  // DELETE FLIGHT
+
+  const deleteFlight = async (id) => {
+
+    try {
+
+      await fetch(
+        `http://localhost:5000/api/flights/${id}`,
+        {
+          method: "DELETE"
+        }
+      );
+
+      setFlights(
+        flights.filter((f) => f._id !== id)
+      );
+
+      alert("Flight Deleted ✅");
+
+    } catch (error) {
 
       alert("Delete Failed ❌");
 
@@ -260,9 +775,194 @@ function AdminDashboard() {
             <p>Total Bookings</p>
           </div>
 
+          <div className="stat-card">
+            <h2>{flights.length}</h2>
+            <p>Total Flights</p>
+          </div>
+
         </div>
 
       </div>
+
+      {/* ADD FLIGHT */}
+
+      <div className="add-flight-box">
+
+        <h2>
+          {
+            editingId
+              ? "Update Flight ✈️"
+              : "Add Flight ✈️"
+          }
+        </h2>
+
+        <input
+          type="text"
+          name="from"
+          placeholder="From"
+          value={flight.from}
+          onChange={handleChange}
+        />
+
+        <input
+          type="text"
+          name="to"
+          placeholder="To"
+          value={flight.to}
+          onChange={handleChange}
+        />
+
+        <input
+          type="date"
+          name="date"
+          value={flight.date}
+          onChange={handleChange}
+        />
+
+        <input
+          type="text"
+          name="airline"
+          placeholder="Airline"
+          value={flight.airline}
+          onChange={handleChange}
+        />
+
+        <input
+          type="time"
+          name="departureTime"
+          value={flight.departureTime}
+          onChange={handleChange}
+        />
+
+        <input
+          type="time"
+          name="arrivalTime"
+          value={flight.arrivalTime}
+          onChange={handleChange}
+        />
+
+        <input
+          type="number"
+          name="price"
+          placeholder="Price"
+          value={flight.price}
+          onChange={handleChange}
+        />
+
+        <input
+          type="number"
+          name="seats"
+          placeholder="Seats"
+          value={flight.seats}
+          onChange={handleChange}
+        />
+
+        <button
+          onClick={
+            editingId
+              ? updateFlight
+              : addFlight
+          }
+        >
+          {
+            editingId
+              ? "Update Flight"
+              : "Add Flight"
+          }
+        </button>
+
+      </div>
+
+      {/* ALL FLIGHTS */}
+
+      <div className="flight-list">
+
+        <h2 className="flight-title">
+          All Flights ✈️
+        </h2>
+
+        {flights.length === 0 ? (
+
+          <p className="no-booking">
+            No Flights Added
+          </p>
+
+        ) : (
+
+          flights.map((f) => (
+
+            <div
+              className="booking-card"
+              key={f._id}
+            >
+
+              <div className="booking-info">
+
+                <h2>
+                  {f.from} ✈️ {f.to}
+                </h2>
+
+                <p>
+                  Airline:
+                  <strong>
+                    {" "}
+                    {f.airline}
+                  </strong>
+                </p>
+
+                <p>
+                  Date:
+                  <strong>
+                    {" "}
+                    {f.date}
+                  </strong>
+                </p>
+
+                <p>
+                  Price:
+                  <strong>
+                    {" "}
+                    ₹{f.price}
+                  </strong>
+                </p>
+
+                <p>
+                  Seats:
+                  <strong>
+                    {" "}
+                    {f.seats}
+                  </strong>
+                </p>
+
+              </div>
+
+              <button
+                className="edit-btn"
+                onClick={() =>
+                  editFlight(f)
+                }
+              >
+                Edit
+              </button>
+
+              <button
+                className="delete-btn"
+                onClick={() =>
+                  deleteFlight(f._id)
+                }
+              >
+                Delete
+              </button>
+
+            </div>
+
+          ))
+
+        )}
+
+      </div>
+
+      {/* BOOKINGS */}
 
       <div className="booking-list">
 
@@ -284,7 +984,7 @@ function AdminDashboard() {
               <div className="booking-info">
 
                 <h2>
-                  {b.from} ✈ {b.to}
+                  {b.from} ✈️ {b.to}
                 </h2>
 
                 <p>
