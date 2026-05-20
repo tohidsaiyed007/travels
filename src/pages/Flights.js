@@ -31,7 +31,7 @@ function Flights() {
   useEffect(() => {
 
     fetch(
-      "http://localhost:5000/api/flights"
+      "https://saiyed-travels-backend-1.onrender.com/api/flights"
     )
 
       .then((res) => res.json())
