@@ -68,7 +68,7 @@ function Booking() {
       }
 
       const response = await fetch(
-        "https://travels-tuvk.onrender.com/booking",
+        "https://saiyed-travels-backend-1.onrender.com/booking",
         {
 
           method: "POST",
